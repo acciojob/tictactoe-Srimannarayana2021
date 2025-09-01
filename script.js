@@ -41,7 +41,7 @@ function handleCellClick(event){
 	cell.classList.add("taken");
 
 	if(checkWin()){
-		const winner = currentPlayer === "x" ? player1 : player2;
+		const winner = currentPlayer === "x" ? "Player1" : "Player2";
 		messageDiv.textContent = `${winner} congratulations you won!`;
 		gameState = false ;
 		return;
