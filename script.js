@@ -10,7 +10,7 @@ let player1 = "";
 let player2 = "";
 let currentPlayer = "x";
 let gameActive = true;
-const gameState = ["", "", "", "", "", "", "", "", ""];
+let gameState = ["", "", "", "", "", "", "", "", ""];
 
 const winningCombinations = [
   [0,1,2],[3,4,5],[6,7,8], // rows
@@ -20,8 +20,8 @@ const winningCombinations = [
 
 // Start Game
 submitBtn.addEventListener("click", () => {
-  player1 = document.getElementById("player1").value || "Player 1";
-  player2 = document.getElementById("player2").value || "Player 2";
+  player1 = document.getElementById("player1").value || "Player1";
+  player2 = document.getElementById("player2").value || "Player2";
 
   playerForm.style.display = "none";
   gameArea.style.display = "block";
