@@ -20,8 +20,8 @@ const submitBtn = document.getElementById("submit");
 
     // Start Game
     submitBtn.addEventListener("click", () => {
-      player1 = document.getElementById("player-1").value || "Player 1";
-      player2 = document.getElementById("player-2").value || "Player 2";
+      player1 = document.getElementById("player1").value || "Player 1";
+      player2 = document.getElementById("player2").value || "Player 2";
 
       playerForm.style.display = "none";
       gameArea.style.display = "block";
@@ -41,7 +41,7 @@ function handleCellClick(event){
 
 	if(checkWin()){
 		const winner = currentPlayer === "X" ? player1 : player2;
-		messageDiv.textContent = `${winner}, congratulations you won!`;
+		messageDiv.textContent = `${winner} congratulations you won!`;
 		gameState = false ;
 		return;
 	}
@@ -54,7 +54,7 @@ function handleCellClick(event){
 
 	//switch turns
 	currentPlayer = currentPlayer ==="X" ? "O" : "X";
-	messageDiv.textContent = currentPlayer === "X" ? `${player1} , you're up` : `${player2} , your're up`;
+	messageDiv.textContent = currentPlayer === "X" ? `${player1}, you're up` : `${player2}, your're up`;
 }
 
 // Check winning condition
